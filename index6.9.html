@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Good Vibes Form</title>
+    <meta name="description" content="Good Vibes Form">
+    <meta name="keywords" content="Good Vibes,positive">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style6.9.css" type="text/css">
+</head>
+ 
+<body>
+    <main>
+        <h1 id="title">good vibes form</h1>
+        <div id="outside">
+            <p id="description">Tell us something positive that happened to you today.</p>
+            <form id="survey-form" action="/do-something" method="POST">    
+
+        <!-- ------------------main Details---------------------------- -->
+                <div class="form_rows">
+                    <div class="labels">
+                        <label id="namde_label" for="name">Name</label>
+                    </div>   
+                    <div class="fields">
+                        <input type="text" id="name" class="input-fields" name="user_name" placeholder="Enter your name" required>
+                    </div> 
+                </div>
+
+                <div class="form_rows">
+                    <div class="labels">
+                        <label id="email_label" for="email">Email</label>
+                    </div>   
+                    <div class="fields">
+                        <input type="text" id="email" class="input-fields" name="user_email" placeholder="Enter your email address" required>
+                    </div> 
+                </div>
+
+                <div class="form_rows">
+                    <div class="labels">
+                        <label id="number_label" for="number">On a scale of 1-10, how good was it?</label>
+                    </div>   
+                    <div class="fields">
+                        <input type="number" id="number" class="input-fields" name="use_number" placeholder="Enter a number between 1 and 10" required min="1" max="10">
+                    </div> 
+                </div>
+
+    <!-- ------------------dropdown-------------------------------- -->
+                <div class="form_rows">
+                    <div class="labels">
+                        <label id="dropdown_label" for="dropdown">Where did it happen?</label>
+                    </div>   
+                    <div class="fields">
+                        <select id="dropdown" name="user_dropdown" class="dropdown">
+                            <option value="home">At home</option>
+                            <option value="commute">On my commute</option>
+                            <option value="work">At work</option>
+                            <option value="street">On the street</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div> 
+                </div>
+
+    <!-- ------------------Radio Buttons-------------------------------- -->            
+                <div class="form_rows">
+                    <div class="labels">
+                        <label id="time_label" for="time">At what time of day did it happen?</label>
+                    </div>   
+
+                    <div class="fields">
+                        <ul id="time_of_day" style="list-style: none;">
+                            <li class="radio">
+                                <label>
+                                    Morning
+                                    <input type="radio" name="user_time" value="morning"  class="user-selection" checked>
+                                </label>
+                            </li>   
+                            <li class="radio">
+                                <label>Afternoon
+                                    <input type="radio" name="user_time" value="afternoon"  class="user-selection">
+                                </label>
+                            </li>
+                            <li>
+                                <label>Evening
+                                    <input type="radio" name="user_time" value="evening"  class="user-selection">
+                                </label>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+
+    <!-- ------------------Checkboxes-------------------------------- -->           
+                <div class="form_rows">
+                    <div class="labels">
+                        <label id="feelings_label" for="feelings">What emotions did you experience?<br>
+                            (Select all that apply)
+                        </label>
+                    </div>   
+                    <div class="fields">
+                        <ul id="feelings" style="list-style:none;">
+                            <li class="radio">
+                                <label>Excited
+                                    <input type="checkbox" name="use_checkbox" value="excited"  class="user-selection">  
+                                </label>
+                            </li>  
+                            <li class="radio">   
+                                <label>Humbled
+                                    <input type="checkbox" name="use_checkbox" value="humbled"  class="user-selection">
+                                </label>
+                            </li>
+                            <li >   
+                                <label>Elated
+                                    <input type="checkbox" name="use_checkbox" value="elated" class="user-selection">
+                                </label>
+                            </li>
+                            <li class="radio">      
+                                <label>Loved
+                                    <input type="checkbox" name="use_checkbox" value="loved"  class="user-selection">
+                                </label>
+                            </li>
+                            <li class="radio">
+                                 <label>Enthusiastic  
+                                    <input type="checkbox" name="use_checkbox" value="enthusiastic"  class="user-selection">
+                                </label>
+                            </li>
+                         </ul>
+                    </div> 
+                </div>
+    <!-- ------------------textarea-------------------------------- --> 
+                <div class="form_rows">
+                    <div class="labels">
+                        <label>Please describe your positive<span>experience.</span>
+                        </label>
+                        <div class="field">
+                            <textarea id="msg" class="input-fields" name="msg" style="height: 50px;resize:vertical;font-family: Open Sans Condensed;" rows="1" rows="1" placeholder="Enter your experience here"></textarea>
+                        </div>
+                    </div>
+    <!-- ------------------button-------------------------------- --> 
+                <div id="submitbutton">
+                    <button type="button" id="submit" class="button">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>   
+</html>
+
